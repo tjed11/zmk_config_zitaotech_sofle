@@ -133,6 +133,13 @@
             timeout-ms = <80>;
             layers = <0>;
         };
+
+        leftShift {
+            bindings = <&kp LSHIFT>;
+            key-positions = <30 59>;
+            timeout-ms = <250>;
+            layers = <0>;
+        };
     };
 
     keymap {
