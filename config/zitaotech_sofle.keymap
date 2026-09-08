@@ -130,6 +130,8 @@
         Semicolon {
             bindings = <&kp SEMICOLON>;
             key-positions = <52 53>;
+            layers = <0>;
+            timeout-ms = <75>;
         };
     };
 
