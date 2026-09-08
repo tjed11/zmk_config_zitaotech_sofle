@@ -63,7 +63,7 @@ layers:
   - {t: SPACE, h: LOWER}
   - {t: '-', h: LEFT CONTROL}
   - RIGHT SHIFT
-  - SPACE
+  - {t: SPACE, h: LOWER}
   - {t: '-', h: RIGHT CONTROL}
   - '='
   - '`'
