@@ -32,7 +32,7 @@ layers:
   - S
   - D
   - F
-  - G
+  - {t: G, h: LEFT SHIFT}
   - '&mkp LCLK'
   - '&mkp LCLK'
   - H
@@ -46,7 +46,7 @@ layers:
   - X
   - C
   - V
-  - B
+  - {t: B, h: LEFT ALT}
   - PG DN
   - PG UP
   - '&msc SCRL_DOWN'
@@ -62,7 +62,7 @@ layers:
   - {t: Ctl+RIGHT, h: LALT}
   - {t: SPACE, h: LOWER}
   - {t: '-', h: LEFT CONTROL}
-  - LOWER
+  - RIGHT SHIFT
   - SPACE
   - {t: '-', h: RIGHT CONTROL}
   - '='
@@ -89,9 +89,9 @@ layers:
   - '9'
   - +
   - F11
-  - F12
+  - (
   - UP ARROW
-  - {t: ▽, type: trans}
+  - )
   - HOME
   - F12
   - {t: ▽, type: trans}
@@ -103,9 +103,9 @@ layers:
   - '&mkp RCLK'
   - '&mkp RCLK'
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - LEFT
+  - DOWN
+  - RIGHT
   - ''''
   - ENTER
   - OUT TOG
@@ -127,10 +127,10 @@ layers:
   - '&bootloader'
   - LGUI
   - LALT
-  - {t: SPACE, type: held}
+  - {t: SPACE, h: RAISE, type: held}
   - LOWER
   - LOWER
-  - SPACE
+  - {t: SPACE, h: RAISE}
   - {t: ▽, type: trans}
   - .
   - '&bootloader'
@@ -194,7 +194,7 @@ layers:
   - ''
   - LGUI
   - LALT
-  - SPACE
+  - {t: SPACE, type: held}
   - LOWER
   - LOWER
   - {t: ▽, type: trans}
@@ -277,10 +277,10 @@ combos:
 - p: [30, 59]
   k: LSHIFT
   l: [QWERTY]
-- p: [36, 37]
+- p: [36, 35]
   k: BACKSPACE
   l: [QWERTY]
-- p: [35, 36]
+- p: [36, 37]
   k: DEL
   l: [QWERTY]
 - p: [62, 35]
@@ -288,4 +288,31 @@ combos:
   l: [QWERTY]
 - p: [37, 38]
   k: '"'
+  l: [QWERTY]
+- p: [59, 41, 28]
+  k: {t: Ctl+LEFT SHIFT, h: sticky}
+  l: [QWERTY]
+- p: [59, 43, 28]
+  k: {t: Gui+LEFT SHIFT, h: sticky}
+  l: [QWERTY]
+- p: [62, 50, 51]
+  k: ENTER
+  l: [QWERTY]
+- p: [44, 45, 59]
+  k: ENTER
+  l: [QWERTY]
+- p: [28, 29]
+  k: BACKSPACE
+  l: [QWERTY]
+- p: [30, 29]
+  k: DEL
+  l: [QWERTY]
+- p: [28, 30]
+  k: O
+  l: [QWERTY]
+- p: [15, 16]
+  k: TAB
+  l: [QWERTY]
+- p: [30, 31]
+  k: TAB
   l: [QWERTY]
