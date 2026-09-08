@@ -250,7 +250,9 @@
 &mt LCTRL LC(LEFT)  &kp LGUI  &mt LALT LC(RIGHT)  &lt 1 SPACE  &mt LEFT_CONTROL MINUS  &kp RIGHT_SHIFT   &lt 1 SPACE  &mt RIGHT_CONTROL MINUS  &kp EQUAL       &kp GRAVE
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp LEFT RIGHT>;
+            sensor-bindings =
+                <&inc_dec_kp RIGHT LEFT>,
+                <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
         };
 
         lower_layer {
