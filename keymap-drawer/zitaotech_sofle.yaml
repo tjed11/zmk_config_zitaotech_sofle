@@ -210,3 +210,6 @@ combos:
 - p: [52, 53]
   k: ;
   l: [QWERTY]
+- p: [30, 59]
+  k: LSHIFT
+  l: [QWERTY]
