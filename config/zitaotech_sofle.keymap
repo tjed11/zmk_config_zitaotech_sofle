@@ -208,7 +208,7 @@
             layers = <0>;
         };
 
-        deleteRight {
+        deleteLeft {
             bindings = <&kp DEL>;
             key-positions = <30 29>;
             timeout-ms = <50>;
