@@ -128,7 +128,7 @@
         compatible = "zmk,combos";
 
         Semicolon {
-            bindings = <&kp SEMICOLON>;
+            bindings = <&kp SEMI>;
             key-positions = <52 53>;
             layers = <0>;
             timeout-ms = <75>;
