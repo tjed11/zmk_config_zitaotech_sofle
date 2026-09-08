@@ -1,8 +1,72 @@
 layout: {zmk_keyboard: zitaotech_sofle}
 layers:
-  QWERTY: [ESC, '1', '2', '3', '4', '5', MUTE, MUTE, '6', '7', '8', '9', '0', BSPC, TAB, Q, W, E, R, T, Y, U, I, O, P, \, CAPS, A, S, D, F, G, '&mkp LCLK', '&mkp
-      LCLK', H, J, K, L, ;, ENTER, LSHFT, Z, X, C, V, B, PG DN, PG UP, '&msc SCRL_DOWN', '&msc SCRL_UP', N, M, ',', ., /, RSHIFT, LCTRL, LGUI, LALT, SPACE, LOWER,
-    LOWER, SPACE, '-', '=', '`']
+  QWERTY:
+  - ESC
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - MUTE
+  - MUTE
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - BSPC
+  - TAB
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - \
+  - CAPS
+  - A
+  - S
+  - D
+  - F
+  - G
+  - '&mkp LCLK'
+  - '&mkp LCLK'
+  - H
+  - J
+  - K
+  - L
+  - ;
+  - ENTER
+  - LSHFT
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - PG DN
+  - PG UP
+  - '&msc SCRL_DOWN'
+  - '&msc SCRL_UP'
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - RSHIFT
+  - LCTRL
+  - LGUI
+  - LALT
+  - {t: SPACE, h: LOWER}
+  - LOWER
+  - LOWER
+  - SPACE
+  - '-'
+  - '='
+  - '`'
   LOWER:
   - ESC
   - F1
@@ -18,24 +82,24 @@ layers:
   - F9
   - F10
   - DEL
-  - TAB
   - {t: ▽, type: trans}
-  - UP
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '-'
+  - '7'
+  - '8'
+  - '9'
   - OUT TOG
   - F11
   - F12
-  - {t: ▽, type: trans}
+  - UP ARROW
   - {t: ▽, type: trans}
   - HOME
   - \
-  - CAPS
-  - LEFT
-  - DOWN
-  - RIGHT
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - .
+  - '4'
+  - '5'
+  - '6'
+  - '0'
   - '&mkp RCLK'
   - '&mkp RCLK'
   - {t: ▽, type: trans}
@@ -44,11 +108,11 @@ layers:
   - {t: ▽, type: trans}
   - ''''
   - ENTER
-  - LSHFT
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - /
+  - '1'
+  - '2'
+  - '3'
   - RGB TOG
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -63,8 +127,8 @@ layers:
   - '&bootloader'
   - LGUI
   - LALT
-  - SPACE
-  - {t: LOWER, type: held}
+  - {t: SPACE, type: held}
+  - LOWER
   - LOWER
   - SPACE
   - {t: ▽, type: trans}
@@ -212,4 +276,10 @@ combos:
   l: [QWERTY]
 - p: [30, 59]
   k: LSHIFT
+  l: [QWERTY]
+- p: [36, 37]
+  k: BACKSPACE
+  l: [QWERTY]
+- p: [35, 36]
+  k: DEL
   l: [QWERTY]
