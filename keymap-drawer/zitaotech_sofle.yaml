@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: zitaotech_sofle}
 layers:
   QWERTY:
-  - ESC
+  - '`'
   - '1'
   - '2'
   - '3'
