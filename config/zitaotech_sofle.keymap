@@ -124,7 +124,16 @@
         };
     };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        semicolon {
+            bindings = <&kp SEMI>;
+            key-positions = <52 53>;
+            timeout-ms = <80>;
+            layers = <0>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
