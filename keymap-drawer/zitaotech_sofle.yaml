@@ -39,7 +39,7 @@ layers:
   - J
   - K
   - L
-  - ;
+  - ''''
   - ENTER
   - LSHFT
   - Z
@@ -57,14 +57,14 @@ layers:
   - .
   - /
   - RSHIFT
-  - LCTRL
+  - {t: Ctl+LEFT, h: LCTRL}
   - LGUI
-  - LALT
+  - {t: Ctl+RIGHT, h: LALT}
   - {t: SPACE, h: LOWER}
-  - LOWER
+  - {t: '-', h: LEFT CONTROL}
   - LOWER
   - SPACE
-  - '-'
+  - {t: '-', h: RIGHT CONTROL}
   - '='
   - '`'
   LOWER:
@@ -81,19 +81,19 @@ layers:
   - F8
   - F9
   - F10
-  - DEL
+  - F11
   - {t: ▽, type: trans}
   - '-'
   - '7'
   - '8'
   - '9'
-  - OUT TOG
+  - +
   - F11
   - F12
   - UP ARROW
   - {t: ▽, type: trans}
   - HOME
-  - \
+  - F12
   - {t: ▽, type: trans}
   - .
   - '4'
@@ -108,12 +108,12 @@ layers:
   - {t: ▽, type: trans}
   - ''''
   - ENTER
-  - {t: ▽, type: trans}
+  - OUT TOG
   - /
   - '1'
   - '2'
   - '3'
-  - RGB TOG
+  - '='
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '&bl BL_DEC'
@@ -150,10 +150,10 @@ layers:
   - F10
   - BSPC
   - TAB
-  - {t: ▽, type: trans}
-  - UP
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - F12
+  - F7
+  - F8
+  - F9
   - OUT TOG
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -162,10 +162,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - CAPS
-  - LEFT
-  - DOWN
-  - RIGHT
-  - {t: ▽, type: trans}
+  - F11
+  - F4
+  - F5
+  - F6
   - {t: ▽, type: trans}
   - '&mkp RCLK'
   - ''
@@ -176,10 +176,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - LSHFT
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - F10
+  - F1
+  - F2
+  - F3
   - RGB TOG
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -282,4 +282,10 @@ combos:
   l: [QWERTY]
 - p: [35, 36]
   k: DEL
+  l: [QWERTY]
+- p: [62, 35]
+  k: RIGHT SHIFT
+  l: [QWERTY]
+- p: [37, 38]
+  k: '"'
   l: [QWERTY]
