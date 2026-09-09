@@ -222,7 +222,7 @@ layers:
   - E
   - R
   - T
-  - Y
+  - '&msc SCRL_UP'
   - {t: U, h: '&mkp MB3'}
   - I
   - O
@@ -236,7 +236,7 @@ layers:
   - G
   - '&mkp LCLK'
   - '&mkp LCLK'
-  - H
+  - '&msc SCRL_DOWN'
   - {t: J, h: '&mkp MB1'}
   - K
   - L
