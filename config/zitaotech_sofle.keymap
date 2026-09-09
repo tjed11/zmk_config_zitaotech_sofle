@@ -271,11 +271,11 @@
         raise_layer {
             display-name = "RAISE";
             bindings = <
-&kp ESC    &kp F1    &kp F2    &kp F3     &kp F4  &kp F5           &bt BT_CLR  &kp C_MUTE  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp BSPC
-&kp TAB    &kp F12   &kp F7    &kp F8     &kp F9  &out OUT_TOG     &trans      &trans      &trans  &trans  &trans  &trans
-&kp CAPS   &kp F11   &kp F4    &kp F5     &kp F6  &trans           &mkp RCLK   &none       &trans  &trans  &trans  &trans  &trans   &trans
-&kp LSHFT  &kp F10   &kp F1    &kp F2     &kp F3  &rgb_ug RGB_TOG  &trans      &trans      &none   &none   &trans  &trans  &trans   &trans    &trans  &trans
-&none      &kp LGUI  &kp LALT  &kp SPACE  &mo 1   &mo 1            &trans      &trans      &trans  &trans
+&kp ESC  &trans    &trans    &trans     &trans  &trans           &bt BT_CLR  &kp C_MUTE  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp BSPC
+&trans   &kp F12   &kp F7    &kp F8     &kp F9  &out OUT_TOG     &trans      &trans      &trans  &trans  &trans  &trans
+&trans   &kp F11   &kp F4    &kp F5     &kp F6  &trans           &mkp RCLK   &none       &trans  &trans  &trans  &trans  &trans   &trans
+&trans   &kp F10   &kp F1    &kp F2     &kp F3  &rgb_ug RGB_TOG  &trans      &trans      &none   &none   &trans  &trans  &trans   &trans    &trans  &trans
+&none    &kp LGUI  &kp LALT  &kp SPACE  &mo 1   &mo 1            &trans      &trans      &trans  &trans
             >;
         };
 
