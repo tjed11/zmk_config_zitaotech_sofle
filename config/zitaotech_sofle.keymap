@@ -137,7 +137,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_NAVLEFT";
             #binding-cells = <0>;
-            bindings = <&mt200ms LC(LEFT) LEFT>, <&tapHold HOME 0>;
+            bindings = <&mt200ms LC(LEFT) LEFT>, <&mt80ms HOME LEFT>;
         };
 
         tapHold: tapHold {
@@ -154,7 +154,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_NAVRIGHT";
             #binding-cells = <0>;
-            bindings = <&mt200ms LC(RIGHT) RIGHT>, <&tapHold END 0>;
+            bindings = <&mt200ms LC(RIGHT) RIGHT>, <&mt80ms END RIGHT>;
         };
 
         td_navUp: td_navUp {
@@ -169,6 +169,16 @@
             label = "TD_NAVDOWN";
             #binding-cells = <0>;
             bindings = <&mt200ms RIGHT_ALT DOWN>, <&mt200ms LC(DOWN) PAGE_DOWN>;
+        };
+
+        mt80ms: mt80ms {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT80MS";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <80>;
+            flavor = "tap-preferred";
         };
     };
 
