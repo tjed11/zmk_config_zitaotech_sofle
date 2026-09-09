@@ -123,13 +123,13 @@
             bindings = <&bt BT_NXT>, <&bt BT_PRV>;
         };
 
-        mt200ms: mt200ms {
+        mt250ms: mt250ms {
             compatible = "zmk,behavior-hold-tap";
-            label = "MT200MS";
+            label = "MT250MS";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             flavor = "tap-preferred";
         };
 
@@ -137,7 +137,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_NAVLEFT";
             #binding-cells = <0>;
-            bindings = <&mt200ms LC(LEFT) LEFT>, <&mt175ms HOME LEFT>;
+            bindings = <&mt250ms LC(LEFT) LEFT>, <&mt200ms HOME LEFT>;
         };
 
         tapHold: tapHold {
@@ -154,30 +154,30 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_NAVRIGHT";
             #binding-cells = <0>;
-            bindings = <&mt200ms LC(RIGHT) RIGHT>, <&mt175ms END RIGHT>;
+            bindings = <&mt250ms LC(RIGHT) RIGHT>, <&mt200ms END RIGHT>;
         };
 
         td_navUp: td_navUp {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_NAVUP";
             #binding-cells = <0>;
-            bindings = <&kp LC(UP_ARROW)>, <&mt200ms LC(UP_ARROW) PAGE_UP>;
+            bindings = <&kp LC(UP_ARROW)>, <&mt250ms LC(UP_ARROW) PAGE_UP>;
         };
 
         td_navDown: td_navDown {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_NAVDOWN";
             #binding-cells = <0>;
-            bindings = <&mt200ms RIGHT_ALT DOWN>, <&mt200ms LC(DOWN) PAGE_DOWN>;
+            bindings = <&mt250ms RIGHT_ALT DOWN>, <&mt250ms LC(DOWN) PAGE_DOWN>;
         };
 
-        mt175ms: mt175ms {
+        mt200ms: mt200ms {
             compatible = "zmk,behavior-hold-tap";
-            label = "MT175MS";
+            label = "MT200MS";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <175>;
+            tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };
     };
@@ -186,7 +186,7 @@
         compatible = "zmk,combos";
 
         semicolon {
-            bindings = <&mt175ms COLON SEMI>;
+            bindings = <&mt200ms COLON SEMI>;
             key-positions = <52 53>;
             timeout-ms = <80>;
             layers = <0>;
@@ -317,10 +317,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&gresc              &mt175ms EXCL N1  &mt175ms AT_SIGN N2  &mt175ms HASH N3  &mt175ms DOLLAR N4      &mt175ms PERCENT N5    &kp C_PLAY_PAUSE  &kp C_MUTE               &mt175ms CARET N6  &mt175ms AMPERSAND N7  &mt175ms ASTERISK N8  &mt175ms LEFT_PARENTHESIS N9  &mt175ms RIGHT_PARENTHESIS N0  &kp BSPC
-&kp TAB             &kp Q             &kp W                &kp E             &kp R                   &kp T                  &kp Y             &kp U                    &kp I              &kp O                  &kp P                 &mt175ms PIPE BSLH
-&kp CAPS            &kp A             &kp S                &kp D             &kp F                   &mt200ms LEFT_SHIFT G  &mkp LCLK         &mkp LCLK                &kp H              &kp J                  &kp K                 &kp L                         &mt175ms DOUBLE_QUOTES APOS    &kp ENTER
-&kp LSHFT           &kp Z             &kp X                &kp C             &kp V                   &mt200ms LEFT_ALT B    &kp PG_DN         &kp PG_UP                &msc SCRL_DOWN     &msc SCRL_UP           &kp N                 &kp M                         &mt175ms LESS_THAN COMMA       &mt175ms GREATER_THAN PERIOD  &mt175ms QUESTION FSLH  &kp RSHIFT
+&gresc              &mt200ms EXCL N1  &mt200ms AT_SIGN N2  &mt200ms HASH N3  &mt200ms DOLLAR N4      &mt200ms PERCENT N5    &kp C_PLAY_PAUSE  &kp C_MUTE               &mt200ms CARET N6  &mt200ms AMPERSAND N7  &mt200ms ASTERISK N8  &mt200ms LEFT_PARENTHESIS N9  &mt200ms RIGHT_PARENTHESIS N0  &kp BSPC
+&kp TAB             &kp Q             &kp W                &kp E             &kp R                   &kp T                  &kp Y             &kp U                    &kp I              &kp O                  &kp P                 &mt200ms PIPE BSLH
+&kp CAPS            &kp A             &kp S                &kp D             &kp F                   &mt250ms LEFT_SHIFT G  &mkp LCLK         &mkp LCLK                &kp H              &kp J                  &kp K                 &kp L                         &mt200ms DOUBLE_QUOTES APOS    &kp ENTER
+&kp LSHFT           &kp Z             &kp X                &kp C             &kp V                   &mt250ms LEFT_ALT B    &kp PG_DN         &kp PG_UP                &msc SCRL_DOWN     &msc SCRL_UP           &kp N                 &kp M                         &mt200ms LESS_THAN COMMA       &mt200ms GREATER_THAN PERIOD  &mt200ms QUESTION FSLH  &kp RSHIFT
 &mt LCTRL LC(LEFT)  &kp LGUI          &mt LALT LC(RIGHT)   &lt 1 SPACE       &mt LEFT_CONTROL MINUS  &kp RIGHT_SHIFT        &lt 1 SPACE       &mt RIGHT_CONTROL MINUS  &kp EQUAL          &kp GRAVE
             >;
 
@@ -333,9 +333,9 @@
             display-name = "LOWER";
             bindings = <
 &kp ESC       &kp F1      &kp F2                  &kp F3                     &kp F4                        &kp F5                         &bt BT_CLR            &kp C_MUTE            &kp F6              &kp F7                 &kp F8       &kp F9        &kp F10                           &kp F11
-&trans        &kp MINUS   &mt175ms AMPERSAND N7   &mt175ms ASTERISK N8       &mt175ms LEFT_PARENTHESIS N9  &kp PLUS                       &mt175ms TILDE GRAVE  &kp LEFT_PARENTHESIS  &td_navUp           &kp RIGHT_PARENTHESIS  &kp HOME     &kp F12
-&trans        &kp PERIOD  &mt175ms DOLLAR N4      &mt175ms PERCENT N5        &mt175ms CARET N6             &mt175ms RIGHT_PARENTHESIS N0  &mkp RCLK             &mkp RCLK             &mt175ms PIPE BSLH  &td_navLeft            &td_navDown  &td_navRight  &mt175ms COLON SEMI               &trans
-&out OUT_TOG  &kp SLASH   &mt175ms EXCL NUMBER_1  &mt175ms AT_SIGN NUMBER_2  &mt175ms HASH N3              &mt175ms PLUS EQUAL            &trans                &trans                &bl BL_DEC          &bl BL_INC             &trans       &trans        &mt175ms LEFT_BRACE LEFT_BRACKET  &mt175ms RIGHT_BRACE RIGHT_BRACKET  &kp UNDER  &kp PLUS
+&trans        &kp MINUS   &mt200ms AMPERSAND N7   &mt200ms ASTERISK N8       &mt200ms LEFT_PARENTHESIS N9  &kp PLUS                       &mt200ms TILDE GRAVE  &kp LEFT_PARENTHESIS  &td_navUp           &kp RIGHT_PARENTHESIS  &kp HOME     &kp F12
+&trans        &kp PERIOD  &mt200ms DOLLAR N4      &mt200ms PERCENT N5        &mt200ms CARET N6             &mt200ms RIGHT_PARENTHESIS N0  &mkp RCLK             &mkp RCLK             &mt200ms PIPE BSLH  &td_navLeft            &td_navDown  &td_navRight  &mt200ms COLON SEMI               &trans
+&out OUT_TOG  &kp SLASH   &mt200ms EXCL NUMBER_1  &mt200ms AT_SIGN NUMBER_2  &mt200ms HASH N3              &mt200ms PLUS EQUAL            &trans                &trans                &bl BL_DEC          &bl BL_INC             &trans       &trans        &mt200ms LEFT_BRACE LEFT_BRACKET  &mt200ms RIGHT_BRACE RIGHT_BRACKET  &kp UNDER  &kp PLUS
 &BOT          &kp LGUI    &kp LALT                &lt 2 SPACE                &kp LC(LS(F1))                &mo 1                          &lt 2 SPACE           &trans                &kp DOT             &BOT
             >;
 
