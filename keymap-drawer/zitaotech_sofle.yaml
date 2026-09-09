@@ -90,7 +90,7 @@ layers:
   - +
   - '`'
   - (
-  - UP ARROW
+  - '&td_navUp'
   - )
   - HOME
   - F12
@@ -104,8 +104,8 @@ layers:
   - '&mkp RCLK'
   - '|'
   - '&td_navLeft'
-  - DOWN
-  - RIGHT
+  - '&td_navDown'
+  - '&td_navRight'
   - ''''
   - {t: ▽, type: trans}
   - OUT TOG
