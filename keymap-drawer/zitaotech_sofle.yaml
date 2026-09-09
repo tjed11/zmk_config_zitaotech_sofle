@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: zitaotech_sofle}
 layers:
   QWERTY:
-  - '`'
+  - {t: ESC, s: '`'}
   - '1'
   - '2'
   - '3'
@@ -88,7 +88,7 @@ layers:
   - '8'
   - '9'
   - +
-  - F11
+  - '`'
   - (
   - UP ARROW
   - )
@@ -102,12 +102,12 @@ layers:
   - '0'
   - '&mkp RCLK'
   - '&mkp RCLK'
-  - {t: ▽, type: trans}
+  - '|'
   - LEFT
   - DOWN
   - RIGHT
   - ''''
-  - ENTER
+  - {t: ▽, type: trans}
   - OUT TOG
   - /
   - '1'
@@ -128,7 +128,7 @@ layers:
   - LGUI
   - LALT
   - {t: SPACE, h: RAISE, type: held}
-  - LOWER
+  - Ctl+Sft+F1
   - LOWER
   - {t: SPACE, h: RAISE}
   - {t: ▽, type: trans}
