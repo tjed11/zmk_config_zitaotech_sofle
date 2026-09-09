@@ -103,7 +103,7 @@ layers:
   - '&mkp RCLK'
   - '&mkp RCLK'
   - '|'
-  - LEFT
+  - '&td_navLeft'
   - DOWN
   - RIGHT
   - ''''
