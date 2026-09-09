@@ -117,6 +117,19 @@
     };
 
     behaviors {
+        as: auto_shift {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+
+            tapping-term-ms = <135>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+
+            bindings = <&kp>, <&kp>;
+        };
+    };
+
+    behaviors {
         BLE_encoder: BLE_encoder {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
@@ -176,7 +189,7 @@
         compatible = "zmk,combos";
 
         semicolon {
-            bindings = <&kp SEMI>;
+            bindings = <AS(SEMI)>;
             key-positions = <52 53>;
             timeout-ms = <80>;
             layers = <0>;
@@ -291,10 +304,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&gresc              &kp N1    &kp N2              &kp N3       &kp N4                  &kp N5                 &kp C_MUTE   &kp C_MUTE               &kp N6          &kp N7        &kp N8  &kp N9    &kp N0     &kp BSPC
-&kp TAB             &kp Q     &kp W               &kp E        &kp R                   &kp T                  &kp Y        &kp U                    &kp I           &kp O         &kp P   &kp BSLH
-&kp CAPS            &kp A     &kp S               &kp D        &kp F                   &mt200ms LEFT_SHIFT G  &mkp LCLK    &mkp LCLK                &kp H           &kp J         &kp K   &kp L     &kp APOS   &kp ENTER
-&kp LSHFT           &kp Z     &kp X               &kp C        &kp V                   &mt200ms LEFT_ALT B    &kp PG_DN    &kp PG_UP                &msc SCRL_DOWN  &msc SCRL_UP  &kp N   &kp M     &kp COMMA  &kp DOT    &kp FSLH  &kp RSHIFT
+&gresc              AS(N1)    AS(N2)              AS(N3)       AS(N4)                  AS(N5)                 &kp C_MUTE   &kp C_MUTE               AS(N6)          AS(N7)        AS(N8)  AS(N9)    AS(N0)     &kp BSPC
+&kp TAB             &kp Q     &kp W               &kp E        &kp R                   &kp T                  &kp Y        &kp U                    &kp I           &kp O         &kp P   AS(BSLH)
+&kp CAPS            &kp A     &kp S               &kp D        &kp F                   &mt200ms LEFT_SHIFT G  &mkp LCLK    &mkp LCLK                &kp H           &kp J         &kp K   &kp L     AS(APOS)   &kp ENTER
+&kp LSHFT           &kp Z     &kp X               &kp C        &kp V                   &mt200ms LEFT_ALT B    &kp PG_DN    &kp PG_UP                &msc SCRL_DOWN  &msc SCRL_UP  &kp N   &kp M     AS(COMMA)  AS(DOT)    AS(FSLH)  &kp RSHIFT
 &mt LCTRL LC(LEFT)  &kp LGUI  &mt LALT LC(RIGHT)  &lt 1 SPACE  &mt LEFT_CONTROL MINUS  &kp RIGHT_SHIFT        &lt 1 SPACE  &mt RIGHT_CONTROL MINUS  &kp EQUAL       &kp GRAVE
             >;
 
@@ -307,9 +320,9 @@
             display-name = "LOWER";
             bindings = <
 &kp ESC       &kp F1      &kp F2    &kp F3       &kp F4          &kp F5     &bt BT_CLR   &kp C_MUTE            &kp F6      &kp F7                 &kp F8       &kp F9        &kp F10   &kp F11
-&trans        &kp MINUS   &kp N7    &kp N8       &kp N9          &kp PLUS   &kp GRAVE    &kp LEFT_PARENTHESIS  &td_navUp   &kp RIGHT_PARENTHESIS  &kp HOME     &kp F12
-&trans        &kp PERIOD  &kp N4    &kp N5       &kp N6          &kp N0     &mkp RCLK    &mkp RCLK             &kp PIPE    &td_navLeft            &td_navDown  &td_navRight  &kp SQT   &trans
-&out OUT_TOG  &kp SLASH   &kp N1    &kp N2       &kp N3          &kp EQUAL  &trans       &trans                &bl BL_DEC  &bl BL_INC             &trans       &trans        &kp LBKT  &kp RBKT  &kp UNDER  &kp PLUS
+&trans        AS(MINUS)   AS(N7)    AS(N8)       AS(N9)          &kp PLUS   &kp GRAVE    &kp LEFT_PARENTHESIS  &td_navUp   &kp RIGHT_PARENTHESIS  &kp HOME     &kp F12
+&trans        AS(PERIOD)  AS(N4)    AS(N5)       AS(N6)          AS(N0)     &mkp RCLK    &mkp RCLK             &kp PIPE    &td_navLeft            &td_navDown  &td_navRight  &kp SQT   &trans
+&out OUT_TOG  AS(SLASH)   AS(N1)    AS(N2)       AS(N3)          AS(EQUAL)  &trans       &trans                &bl BL_DEC  &bl BL_INC             &trans       &trans        &kp LBKT  &kp RBKT  &kp UNDER  &kp PLUS
 &BOT          &kp LGUI    &kp LALT  &lt 2 SPACE  &kp LC(LS(F1))  &mo 1      &lt 2 SPACE  &trans                &kp DOT     &BOT
             >;
 
