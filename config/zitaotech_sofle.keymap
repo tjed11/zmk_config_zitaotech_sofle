@@ -132,6 +132,13 @@
             tapping-term-ms = <250>;
             flavor = "tap-preferred";
         };
+
+        td_navLeft: td_navLeft {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_NAVLEFT";
+            #binding-cells = <0>;
+            bindings = <&mt250ms LC(LEFT) LEFT>, <&kp HOME>;
+        };
     };
 
     combos {
@@ -270,7 +277,7 @@
             bindings = <
 &kp ESC       &kp F1      &kp F2    &kp F3       &kp F4          &kp F5     &bt BT_CLR   &kp C_MUTE            &kp F6        &kp F7                 &kp F8    &kp F9     &kp F10   &kp F11
 &trans        &kp MINUS   &kp N7    &kp N8       &kp N9          &kp PLUS   &kp GRAVE    &kp LEFT_PARENTHESIS  &kp UP_ARROW  &kp RIGHT_PARENTHESIS  &kp HOME  &kp F12
-&trans        &kp PERIOD  &kp N4    &kp N5       &kp N6          &kp N0     &mkp RCLK    &mkp RCLK             &kp PIPE      &kp LEFT               &kp DOWN  &kp RIGHT  &kp SQT   &trans
+&trans        &kp PERIOD  &kp N4    &kp N5       &kp N6          &kp N0     &mkp RCLK    &mkp RCLK             &kp PIPE      &td_navLeft            &kp DOWN  &kp RIGHT  &kp SQT   &trans
 &out OUT_TOG  &kp SLASH   &kp N1    &kp N2       &kp N3          &kp EQUAL  &trans       &trans                &bl BL_DEC    &bl BL_INC             &trans    &trans     &kp LBKT  &kp RBKT  &kp UNDER  &kp PLUS
 &BOT          &kp LGUI    &kp LALT  &lt 2 SPACE  &kp LC(LS(F1))  &mo 1      &lt 2 SPACE  &trans                &kp DOT       &BOT
             >;
