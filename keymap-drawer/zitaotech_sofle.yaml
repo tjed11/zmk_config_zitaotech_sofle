@@ -136,11 +136,11 @@ layers:
   - '&bootloader'
   RAISE:
   - ESC
-  - F1
-  - F2
-  - F3
-  - F4
-  - F5
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - BT CLR
   - MUTE
   - F6
@@ -149,7 +149,7 @@ layers:
   - F9
   - F10
   - BSPC
-  - TAB
+  - {t: ▽, type: trans}
   - F12
   - F7
   - F8
@@ -161,7 +161,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - CAPS
+  - {t: ▽, type: trans}
   - F11
   - F4
   - F5
@@ -175,7 +175,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - LSHFT
+  - {t: ▽, type: trans}
   - F10
   - F1
   - F2
