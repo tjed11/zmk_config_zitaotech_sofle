@@ -123,13 +123,13 @@
             bindings = <&bt BT_NXT>, <&bt BT_PRV>;
         };
 
-        mt250ms: mt250ms {
+        mt200ms: mt200ms {
             compatible = "zmk,behavior-hold-tap";
-            label = "MT250MS";
+            label = "MT200MS";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };
 
@@ -137,7 +137,38 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_NAVLEFT";
             #binding-cells = <0>;
-            bindings = <&mt250ms LC(LEFT) LEFT>, <&kp HOME>;
+            bindings = <&mt200ms LC(LEFT) LEFT>, <&tapHold HOME 0>;
+        };
+
+        tapHold: tapHold {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TAPHOLD";
+            bindings = <&kp>, <&none>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "hold-preferred";
+        };
+
+        td_navRight: td_navRight {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_NAVRIGHT";
+            #binding-cells = <0>;
+            bindings = <&mt200ms LC(RIGHT) RIGHT>, <&tapHold END 0>;
+        };
+
+        td_navUp: td_navUp {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_NAVUP";
+            #binding-cells = <0>;
+            bindings = <&kp LC(UP_ARROW)>, <&mt200ms LC(UP_ARROW) PAGE_UP>;
+        };
+
+        td_navDown: td_navDown {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_NAVDOWN";
+            #binding-cells = <0>;
+            bindings = <&mt200ms RIGHT_ALT DOWN>, <&mt200ms LC(DOWN) PAGE_DOWN>;
         };
     };
 
@@ -262,8 +293,8 @@
             bindings = <
 &gresc              &kp N1    &kp N2              &kp N3       &kp N4                  &kp N5                 &kp C_MUTE   &kp C_MUTE               &kp N6          &kp N7        &kp N8  &kp N9    &kp N0     &kp BSPC
 &kp TAB             &kp Q     &kp W               &kp E        &kp R                   &kp T                  &kp Y        &kp U                    &kp I           &kp O         &kp P   &kp BSLH
-&kp CAPS            &kp A     &kp S               &kp D        &kp F                   &mt250ms LEFT_SHIFT G  &mkp LCLK    &mkp LCLK                &kp H           &kp J         &kp K   &kp L     &kp APOS   &kp ENTER
-&kp LSHFT           &kp Z     &kp X               &kp C        &kp V                   &mt250ms LEFT_ALT B    &kp PG_DN    &kp PG_UP                &msc SCRL_DOWN  &msc SCRL_UP  &kp N   &kp M     &kp COMMA  &kp DOT    &kp FSLH  &kp RSHIFT
+&kp CAPS            &kp A     &kp S               &kp D        &kp F                   &mt200ms LEFT_SHIFT G  &mkp LCLK    &mkp LCLK                &kp H           &kp J         &kp K   &kp L     &kp APOS   &kp ENTER
+&kp LSHFT           &kp Z     &kp X               &kp C        &kp V                   &mt200ms LEFT_ALT B    &kp PG_DN    &kp PG_UP                &msc SCRL_DOWN  &msc SCRL_UP  &kp N   &kp M     &kp COMMA  &kp DOT    &kp FSLH  &kp RSHIFT
 &mt LCTRL LC(LEFT)  &kp LGUI  &mt LALT LC(RIGHT)  &lt 1 SPACE  &mt LEFT_CONTROL MINUS  &kp RIGHT_SHIFT        &lt 1 SPACE  &mt RIGHT_CONTROL MINUS  &kp EQUAL       &kp GRAVE
             >;
 
@@ -275,11 +306,11 @@
         lower_layer {
             display-name = "LOWER";
             bindings = <
-&kp ESC       &kp F1      &kp F2    &kp F3       &kp F4          &kp F5     &bt BT_CLR   &kp C_MUTE            &kp F6        &kp F7                 &kp F8    &kp F9     &kp F10   &kp F11
-&trans        &kp MINUS   &kp N7    &kp N8       &kp N9          &kp PLUS   &kp GRAVE    &kp LEFT_PARENTHESIS  &kp UP_ARROW  &kp RIGHT_PARENTHESIS  &kp HOME  &kp F12
-&trans        &kp PERIOD  &kp N4    &kp N5       &kp N6          &kp N0     &mkp RCLK    &mkp RCLK             &kp PIPE      &td_navLeft            &kp DOWN  &kp RIGHT  &kp SQT   &trans
-&out OUT_TOG  &kp SLASH   &kp N1    &kp N2       &kp N3          &kp EQUAL  &trans       &trans                &bl BL_DEC    &bl BL_INC             &trans    &trans     &kp LBKT  &kp RBKT  &kp UNDER  &kp PLUS
-&BOT          &kp LGUI    &kp LALT  &lt 2 SPACE  &kp LC(LS(F1))  &mo 1      &lt 2 SPACE  &trans                &kp DOT       &BOT
+&kp ESC       &kp F1      &kp F2    &kp F3       &kp F4          &kp F5     &bt BT_CLR   &kp C_MUTE            &kp F6      &kp F7                 &kp F8       &kp F9        &kp F10   &kp F11
+&trans        &kp MINUS   &kp N7    &kp N8       &kp N9          &kp PLUS   &kp GRAVE    &kp LEFT_PARENTHESIS  &td_navUp   &kp RIGHT_PARENTHESIS  &kp HOME     &kp F12
+&trans        &kp PERIOD  &kp N4    &kp N5       &kp N6          &kp N0     &mkp RCLK    &mkp RCLK             &kp PIPE    &td_navLeft            &td_navDown  &td_navRight  &kp SQT   &trans
+&out OUT_TOG  &kp SLASH   &kp N1    &kp N2       &kp N3          &kp EQUAL  &trans       &trans                &bl BL_DEC  &bl BL_INC             &trans       &trans        &kp LBKT  &kp RBKT  &kp UNDER  &kp PLUS
+&BOT          &kp LGUI    &kp LALT  &lt 2 SPACE  &kp LC(LS(F1))  &mo 1      &lt 2 SPACE  &trans                &kp DOT     &BOT
             >;
 
             sensor-bindings = <&BLE_encoder &inc_dec_kp UP DOWN>;
