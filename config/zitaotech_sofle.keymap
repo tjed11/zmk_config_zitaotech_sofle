@@ -137,9 +137,9 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_NAVLEFT";
             #binding-cells = <0>;
-            bindings = <&mt135ms LC(LEFT) LEFT>, <&mt135ms HOME LEFT>;
+            bindings = <&mt135ms LC(LEFT) LEFT>, <&mt245ms HOME LEFT>;
 
-            tapping-term-ms = <135>;
+            tapping-term-ms = <120>;
         };
 
         tapHold: tapHold {
@@ -156,23 +156,27 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_NAVRIGHT";
             #binding-cells = <0>;
-            bindings = <&mt135ms LC(RIGHT) RIGHT>, <&mt135ms END RIGHT>;
+            bindings = <&mt135ms LC(RIGHT) RIGHT>, <&mt245ms END RIGHT>;
 
-            tapping-term-ms = <135>;
+            tapping-term-ms = <120>;
         };
 
         td_navUp: td_navUp {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_NAVUP";
             #binding-cells = <0>;
-            bindings = <&kp UP_ARROW>, <&mt135ms LC(UP_ARROW) PAGE_UP>;
+            bindings = <&kp UP_ARROW>, <&mt245ms LC(UP_ARROW) PAGE_UP>;
+
+            tapping-term-ms = <120>;
         };
 
         td_navDown: td_navDown {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_NAVDOWN";
             #binding-cells = <0>;
-            bindings = <&mt135ms RIGHT_ALT DOWN>, <&mt135ms LC(DOWN) PAGE_DOWN>;
+            bindings = <&mt135ms RIGHT_ALT DOWN>, <&mt245ms LC(DOWN) PAGE_DOWN>;
+
+            tapping-term-ms = <120>;
         };
 
         mt245ms: mt245ms {
