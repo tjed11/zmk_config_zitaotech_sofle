@@ -236,7 +236,7 @@ layers:
   - G
   - '&mkp LCLK'
   - '&mkp LCLK'
-  - {t: '&mkp MB1', h: '&mkp MB1'}
+  - {t: H, h: '&mkp MB1'}
   - '&msc SCRL_DOWN'
   - K
   - L
