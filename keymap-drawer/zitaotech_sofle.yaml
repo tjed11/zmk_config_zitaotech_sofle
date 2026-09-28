@@ -236,7 +236,7 @@ layers:
   - G
   - '&mkp LCLK'
   - '&mkp LCLK'
-  - {t: '&mkp MCLK', h: '&mkp MB3'}
+  - '&mkp MB1'
   - '&msc SCRL_DOWN'
   - K
   - L
@@ -252,7 +252,7 @@ layers:
   - '&msc SCRL_UP'
   - ''
   - ''
-  - N
+  - '&mkp MB3'
   - {t: M, h: '&mkp MB2'}
   - ','
   - .
@@ -263,7 +263,7 @@ layers:
   - LALT
   - SPACE
   - '&mkp MB1'
-  - {t: '&mkp LCLK', h: '&mkp MB1'}
+  - '&mkp LCLK'
   - '&tdRMCLK'
   - '-'
   - '='
