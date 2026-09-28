@@ -384,11 +384,11 @@
         MOUSE_layer {
             display-name = "MOUSE";
             bindings = <
-&kp ESC    &kp N1    &kp N2    &kp N3     &kp N4    &kp N5                &bt BT_CLR      &kp C_MUTE    &kp N6                &kp N7          &kp N8  &kp N9       &kp N0     &kp BSPC
-&kp TAB    &kp Q     &kp W     &kp E      &kp R     &kp T                 &mkp MB2        &msc SCRL_UP  &kp I                 &kp O           &kp P   &kp BSLH
-&kp CAPS   &kp A     &kp S     &kp D      &kp F     &kp G                 &mkp LCLK       &mkp LCLK     &mk_mt180ms MB3 MCLK  &msc SCRL_DOWN  &kp K   &kp L        &kp SEMI   &kp ENTER
-&kp LSHFT  &kp Z     &kp X     &kp C      &kp V     &kp B                 &msc SCRL_DOWN  &msc SCRL_UP  &none                 &none           &kp N   &M_kp MB2 M  &kp COMMA  &kp DOT    &kp FSLH  &kp RSHIFT
-&kp LCTRL  &kp LGUI  &kp LALT  &kp SPACE  &mkp MB1  &mk_mt180ms MB1 LCLK  &tdRMCLK        &kp MINUS     &kp EQUAL             &kp GRAVE
+&kp ESC    &kp N1    &kp N2    &kp N3     &kp N4    &kp N5     &bt BT_CLR      &kp C_MUTE    &kp N6     &kp N7          &kp N8    &kp N9       &kp N0     &kp BSPC
+&kp TAB    &kp Q     &kp W     &kp E      &kp R     &kp T      &mkp MB2        &msc SCRL_UP  &kp I      &kp O           &kp P     &kp BSLH
+&kp CAPS   &kp A     &kp S     &kp D      &kp F     &kp G      &mkp LCLK       &mkp LCLK     &mkp MB1   &msc SCRL_DOWN  &kp K     &kp L        &kp SEMI   &kp ENTER
+&kp LSHFT  &kp Z     &kp X     &kp C      &kp V     &kp B      &msc SCRL_DOWN  &msc SCRL_UP  &none      &none           &mkp MB3  &M_kp MB2 M  &kp COMMA  &kp DOT    &kp FSLH  &kp RSHIFT
+&kp LCTRL  &kp LGUI  &kp LALT  &kp SPACE  &mkp MB1  &mkp LCLK  &tdRMCLK        &kp MINUS     &kp EQUAL  &kp GRAVE
             >;
         };
 
