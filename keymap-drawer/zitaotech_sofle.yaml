@@ -263,7 +263,7 @@ layers:
   - LALT
   - SPACE
   - '&mkp MB1'
-  - '&mkp LCLK'
+  - '&mkp MB1'
   - '&tdRMCLK'
   - '-'
   - '='
