@@ -353,11 +353,11 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&gresc              &mt245ms EXCL N1  &mt245ms AT_SIGN N2  &mt245ms HASH N3  &mt245ms DOLLAR N4      &mt245ms PERCENT N5    &kp C_PLAY_PAUSE  &kp C_MUTE               &mt245ms CARET N6  &mt245ms AMPERSAND N7  &mt245ms ASTERISK N8  &mt245ms LEFT_PARENTHESIS N9  &mt245ms RIGHT_PARENTHESIS N0  &kp BSPC
-&kp TAB             &kp Q             &kp W                &kp E             &kp R                   &kp T                  &kp Y             &kp U                    &kp I              &kp O                  &kp P                 &mt245ms PIPE BSLH
-&kp CAPS            &kp A             &kp S                &kp D             &kp F                   &mt245ms LEFT_SHIFT G  &mkp LCLK         &mkp LCLK                &kp H              &kp J                  &kp K                 &kp L                         &mt245ms DOUBLE_QUOTES APOS    &kp SEMI
-&kp LSHFT           &kp Z             &kp X                &kp C             &kp V                   &mt245ms LEFT_ALT B    &kp PG_DN         &kp PG_UP                &msc SCRL_DOWN     &msc SCRL_UP           &kp N                 &kp M                         &mt245ms LESS_THAN COMMA       &mt245ms GREATER_THAN PERIOD  &mt245ms QUESTION FSLH  &kp RSHIFT
-&mt LCTRL LC(LEFT)  &kp LGUI          &mt LALT LC(RIGHT)   &lt 1 SPACE       &mt LEFT_CONTROL MINUS  &kp RIGHT_SHIFT        &lt 1 SPACE       &mt RIGHT_CONTROL MINUS  &kp EQUAL          &kp GRAVE
+&gresc                &mt245ms EXCL N1  &mt245ms AT_SIGN N2   &mt245ms HASH N3  &mt245ms DOLLAR N4      &mt245ms PERCENT N5    &kp C_PLAY_PAUSE  &kp C_MUTE               &mt245ms CARET N6  &mt245ms AMPERSAND N7  &mt245ms ASTERISK N8  &mt245ms LEFT_PARENTHESIS N9  &mt245ms RIGHT_PARENTHESIS N0  &kp BSPC
+&kp TAB               &kp Q             &kp W                 &kp E             &kp R                   &kp T                  &kp Y             &kp U                    &kp I              &kp O                  &kp P                 &mt245ms PIPE BSLH
+&kp CAPS              &kp A             &kp S                 &kp D             &kp F                   &mt245ms LEFT_SHIFT G  &mkp LCLK         &mkp LCLK                &kp H              &kp J                  &kp K                 &kp L                         &mt245ms DOUBLE_QUOTES APOS    &kp SEMI
+&kp LSHFT             &kp Z             &kp X                 &kp C             &kp V                   &mt245ms LEFT_ALT B    &kp PG_DN         &kp PG_UP                &msc SCRL_DOWN     &msc SCRL_UP           &kp N                 &kp M                         &mt245ms LESS_THAN COMMA       &mt245ms GREATER_THAN PERIOD  &mt245ms QUESTION FSLH  &kp RSHIFT
+&mt (LCTRL) LC(LEFT)  &kp LGUI          &mt (LALT) LC(RIGHT)  &lt 1 SPACE       &mt LEFT_CONTROL MINUS  &kp RIGHT_SHIFT        &lt 1 SPACE       &mt RIGHT_CONTROL MINUS  &kp EQUAL          &kp GRAVE
             >;
 
             sensor-bindings =
@@ -404,7 +404,7 @@
             display-name = "RESERVE";
             bindings = <
 &none  &none  &none        &none        &none         &none  &none  &none  &none  &none  &none  &none  &none  &none
-&none  &none  &kp J        &td_navUp    &kp K         &none  &none  &none  &none  &none  &none  &none
+&none  &none  &kp J        &td_navUp    &kp L         &none  &none  &none  &none  &none  &none  &none
 &none  &none  &td_navLeft  &td_navDown  &td_navRight  &none  &none  &none  &none  &none  &none  &none  &none  &none
 &none  &none  &none        &none        &none         &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
 &none  &none  &none        &none        &none         &none  &none  &none  &none  &none
