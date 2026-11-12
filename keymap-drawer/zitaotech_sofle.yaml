@@ -57,9 +57,9 @@ layers:
   - {t: ., h: '>'}
   - {t: /, h: '?'}
   - RSHIFT
-  - {t: Ctl+LEFT, h: LCTRL}
+  - {t: Ctl+LEFT, h: (LCTRL)}
   - LGUI
-  - {t: Ctl+RIGHT, h: LALT}
+  - {t: Ctl+RIGHT, h: (LALT)}
   - {t: SPACE, h: LOWER}
   - {t: '-', h: LEFT CONTROL}
   - RIGHT SHIFT
@@ -287,7 +287,7 @@ layers:
   - ''
   - J
   - '&td_navUp'
-  - K
+  - L
   - ''
   - ''
   - ''
